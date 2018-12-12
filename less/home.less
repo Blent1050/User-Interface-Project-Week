@@ -3,29 +3,25 @@
   margin: 0 auto;
   padding: 0 8rem;
 }
-.top-spacing{
-    padding-top: 6rem;
-}
+
+
 // Jumbotron styling
 .jumbotron {
-    margin: 0 auto;
-    
-    background: url(/img/home/home-jumbotron.png) center center no-repeat;
-    background-size: cover;
-    min-height: 50rem;
-    height: 25vh;
+    position: relative;
+    margin: 0rem auto;
     max-width: 1028px;
-    .image-text {
-        position: relative;
-        top: 30rem;
-        left: 5%;
-        font-size: 4rem;
-        font-weight: 600;
-        color: #fff;
-        width: 40px;
+    width: 100%;
+    .image-text{
+        position: absolute;
+        left: 8%;
+        bottom: 8.3%;
+        display: inline-block;
+        color: white;
+        font-size: 5rem;
+        font-weight: bold;
     }
     h2{
-        margin-bottom: 1rem
+        margin-bottom: 1rem; 
     }
 }
 
@@ -42,24 +38,11 @@
         width: 100%;
         height: auto;
     }
-    .image-1{
-        background: url(/img/home/home-img-1.png) center center no-repeat;
-        background-size: cover;
-        width: 75rem;
-        height: 25rem;
-    }
-    .image-2{
-        background: url(/img/home/home-img-2.png) center center no-repeat;
-        background-size: cover;
-        width: 75rem;
-        height: 25rem;
-        margin-right: 3rem;
-    }
     .content{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 3rem 0 0;
+        padding: 0 3rem 0 3rem;
         width: 95%;
     }
     h2{
@@ -88,25 +71,18 @@
     .projects-card{
         display: flex;
     }
-    .image-1{
-        .display-image('/img/home/home-villas-img.png');
-        position: relative;
+    .project-card{
+        position: relative
     }
-    .image-2{
-        .display-image('/img/home/home-outskirts-img.png');
-        position: relative;
-    }
-    .image-3{
-        .display-image('/img/home/home-the-blocks-img.png');
-        position: relative;
-    }
+    
     .content{
         width: 50%;
         margin: 5rem auto;
     }
     .project-card:first-of-type h3, 
     .project-card:last-child h3{
-        display: inline-block;
+        display:inline-flex;
+        justify-content: flex-end;
         background-color: #D8D8D8;
         border: 1px solid white;
         padding: 3rem 4rem;
@@ -115,7 +91,7 @@
         letter-spacing: 0.5rem;
         font-weight: lighter; 
         position: absolute;
-        bottom: -3rem;
+        top: 37%;
         right: 0;
        
     }
@@ -128,8 +104,8 @@
         font-size: 2.5rem;
         letter-spacing: 0.5rem;
         font-weight: lighter;
-        position: absolute;
-        bottom: -3rem;
+        position: relative;
+        bottom:5rem;
         left: 0;
        
     }

@@ -24,6 +24,18 @@
 
 .mobile() {
   @media (max-width: 756px) {
+    .img--mobile {
+      display: block;
+    }
+    .img--desktop {
+      display: none;
+    }
+    .image-text{
+      font-size: 36px;
+      line-height: 42px;
+      left: 4.7%;
+      bottom: 10%;
+    }
     // Navbar
     .logo {
       margin: 0;
@@ -45,21 +57,7 @@
       .about-card:last-child {
         flex-direction: column-reverse;
       }
-      .image-1 {
-        background: url(/img/home/home-mobile-img-1.png) center center no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 30rem;
-        margin-bottom: 2rem;
-      }
-      .image-2 {
-        background: url(/img/home/home-mobile-img-2.png) center center no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 30rem;
-        margin-bottom: 2rem;
-        margin-right: 0;
-      }
+
       h2 {
         font-size: 3rem;
         font-weight: bold;
@@ -81,21 +79,6 @@
       p {
         font-size: 2.2rem;
         line-height: 3rem;
-      }
-      .image-1 {
-        .display-image("/img/home/home-mobile-villas-img.png");
-        width: 100%;
-        height: 20rem;
-      }
-      .image-2 {
-        .display-image("/img/home/home-mobile-outskirts-img.png");
-        width: 100%;
-        height: 20rem;
-      }
-      .image-3 {
-        .display-image("/img/home/home-mobile-the-blocks-img.png");
-        width: 100%;
-        height: 20rem;
       }
       .project-card:first-of-type h3,
       .project-card:last-child h3,
@@ -125,38 +108,6 @@
       width: 100%;
     }
     //Services
-    .services-container {
-
-      .image-1 {
-        .display-image(
-          "/img/services/services-tab-mobile-pre-construction-img.png"
-        );
-        height: 25rem;
-        width: 95%;
-        margin-bottom: 5rem;
-      }
-      .image-2 {
-        .display-image(
-          "/img/services/services-tab-mobile-construction-img.png"
-        );
-        height: 25rem;
-        width: 95%
-      }
-      .image-3 {
-        .display-image(
-          "/img/services/services-tab-mobile-design-build-img.png"
-        );
-        height: 25rem;
-        width: 95%
-      }
-      .image-4 {
-        .display-image(
-          "/img/services/services-tab-mobile-sustainability-img.png"
-        );
-        height: 25rem;
-        width: 95%
-      }
-    }
 
     .tabs {
       .tabs-links {

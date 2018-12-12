@@ -66,15 +66,28 @@ html, body{
   background-color: #FFFFFF;
   color: #222222;
   font-family: Roboto, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 62.5%;
   .mobile();
 }
 a{
   text-decoration: none;
 }
+p{
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
 .hidden{
   opacity: 0;
 }
+img{
+  width: 100%;
+ 
+}
+  // when on desktop view, hide all mobile images
+  .img--mobile {
+    display: none;
+  }
 
 @import "mixins";
 @import "navbar";
