@@ -1,5 +1,5 @@
 import React from "react";
-
+import jumboImg from '/Users/Brandon/Documents/Lambda/Project-week/User-Interface-Project-Week/stretch/src/img/home/home-jumbotron.png';
 
 const Home = () => {
     return(
@@ -14,7 +14,7 @@ const Home = () => {
 	<div className="container">
 		<div className="about-container">
 			<div className="about-card ">
-				<div className="image-1"></div>
+				<div className="image-1"><img src={jumboImg}></img></div>
 				<div className="content">
 					<h2>Smith & Jones Architects</h2>
 					<p>Et sed autem causae appareat, tempor abhorreant te mei, facer facilisis sit ea. Eu timeam vidisse consectetuer
