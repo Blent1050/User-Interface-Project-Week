@@ -144,9 +144,24 @@ body {
   background-color: #FFFFFF;
   color: #222222;
   font-family: Roboto, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 62.5%;
 }
 @media (max-width: 756px) {
+  html .img--mobile,
+  body .img--mobile {
+    display: block;
+  }
+  html .img--desktop,
+  body .img--desktop {
+    display: none;
+  }
+  html .image-text,
+  body .image-text {
+    font-size: 36px;
+    line-height: 42px;
+    left: 4.7%;
+    bottom: 10%;
+  }
   html .logo,
   body .logo {
     margin: 0;
@@ -168,23 +183,6 @@ body {
   html .about-container .about-card:last-child,
   body .about-container .about-card:last-child {
     flex-direction: column-reverse;
-  }
-  html .about-container .image-1,
-  body .about-container .image-1 {
-    background: url('/img/home/home-mobile-img-1.png') center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 30rem;
-    margin-bottom: 2rem;
-  }
-  html .about-container .image-2,
-  body .about-container .image-2 {
-    background: url('/img/home/home-mobile-img-2.png') center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 30rem;
-    margin-bottom: 2rem;
-    margin-right: 0;
   }
   html .about-container h2,
   body .about-container h2 {
@@ -208,39 +206,6 @@ body {
   body .projects-container p {
     font-size: 2.2rem;
     line-height: 3rem;
-  }
-  html .projects-container .image-1,
-  body .projects-container .image-1 {
-    background: url("/img/home/home-mobile-villas-img.png");
-    background-size: cover;
-    width: 85rem;
-    height: 15rem;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 100%;
-    height: 20rem;
-  }
-  html .projects-container .image-2,
-  body .projects-container .image-2 {
-    background: url("/img/home/home-mobile-outskirts-img.png");
-    background-size: cover;
-    width: 85rem;
-    height: 15rem;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 100%;
-    height: 20rem;
-  }
-  html .projects-container .image-3,
-  body .projects-container .image-3 {
-    background: url("/img/home/home-mobile-the-blocks-img.png");
-    background-size: cover;
-    width: 85rem;
-    height: 15rem;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 100%;
-    height: 20rem;
   }
   html .projects-container .project-card:first-of-type h3,
   body .projects-container .project-card:first-of-type h3,
@@ -273,51 +238,6 @@ body {
   body .btn {
     width: 100%;
   }
-  html .services-container .image-1,
-  body .services-container .image-1 {
-    background: url("/img/services/services-tab-mobile-pre-construction-img.png");
-    background-size: cover;
-    width: 85rem;
-    height: 15rem;
-    margin: 0 auto;
-    max-width: 100%;
-    height: 25rem;
-    width: 95%;
-    margin-bottom: 5rem;
-  }
-  html .services-container .image-2,
-  body .services-container .image-2 {
-    background: url("/img/services/services-tab-mobile-construction-img.png");
-    background-size: cover;
-    width: 85rem;
-    height: 15rem;
-    margin: 0 auto;
-    max-width: 100%;
-    height: 25rem;
-    width: 95%;
-  }
-  html .services-container .image-3,
-  body .services-container .image-3 {
-    background: url("/img/services/services-tab-mobile-design-build-img.png");
-    background-size: cover;
-    width: 85rem;
-    height: 15rem;
-    margin: 0 auto;
-    max-width: 100%;
-    height: 25rem;
-    width: 95%;
-  }
-  html .services-container .image-4,
-  body .services-container .image-4 {
-    background: url("/img/services/services-tab-mobile-sustainability-img.png");
-    background-size: cover;
-    width: 85rem;
-    height: 15rem;
-    margin: 0 auto;
-    max-width: 100%;
-    height: 25rem;
-    width: 95%;
-  }
   html .tabs .tabs-links,
   body .tabs .tabs-links {
     flex-direction: column;
@@ -344,8 +264,18 @@ body {
 a {
   text-decoration: none;
 }
+p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
 .hidden {
   opacity: 0;
+}
+img {
+  width: 100%;
+}
+.img--mobile {
+  display: none;
 }
 header {
   background-color: #9AA3AD;
@@ -363,15 +293,14 @@ header nav {
   align-items: center;
   justify-content: center;
 }
-header nav i {
+header nav a {
   font-weight: bold;
   font-size: 48px;
   line-height: 85px;
   color: #fff;
   display: none;
-  cursor: pointer;
 }
-header nav i:hover {
+header nav a:hover {
   color: #222222;
 }
 .logo {
@@ -389,7 +318,7 @@ header nav i:hover {
 .show-nav {
   height: 100vh;
 }
-.show-nav div {
+.show-nav a {
   display: block;
 }
 .transparent-bg {
@@ -461,25 +390,20 @@ footer p {
   margin: 0 auto;
   padding: 0 8rem;
 }
-.top-spacing {
-  padding-top: 6rem;
-}
 .jumbotron {
-  margin: 0 auto;
-  background: url('/img/home/home-jumbotron.png') center center no-repeat;
-  background-size: cover;
-  min-height: 50rem;
-  height: 25vh;
+  position: relative;
+  margin: 0rem auto;
   max-width: 1028px;
+  width: 100%;
 }
 .jumbotron .image-text {
-  position: relative;
-  top: 30rem;
-  left: 5%;
-  font-size: 4rem;
-  font-weight: 600;
-  color: #fff;
-  width: 40px;
+  position: absolute;
+  left: 8%;
+  bottom: 8.3%;
+  display: inline-block;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
 }
 .jumbotron h2 {
   margin-bottom: 1rem;
@@ -496,24 +420,11 @@ footer p {
   width: 100%;
   height: auto;
 }
-.about-container .image-1 {
-  background: url('/img/home/home-img-1.png') center center no-repeat;
-  background-size: cover;
-  width: 75rem;
-  height: 25rem;
-}
-.about-container .image-2 {
-  background: url('/img/home/home-img-2.png') center center no-repeat;
-  background-size: cover;
-  width: 75rem;
-  height: 25rem;
-  margin-right: 3rem;
-}
 .about-container .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 3rem 0 0;
+  padding: 0 3rem 0 3rem;
   width: 95%;
 }
 .about-container h2 {
@@ -553,31 +464,7 @@ footer p {
 .projects-container .projects-card {
   display: flex;
 }
-.projects-container .image-1 {
-  background: url('/img/home/home-villas-img.png');
-  background-size: cover;
-  width: 85rem;
-  height: 15rem;
-  margin: 0 auto;
-  max-width: 100%;
-  position: relative;
-}
-.projects-container .image-2 {
-  background: url('/img/home/home-outskirts-img.png');
-  background-size: cover;
-  width: 85rem;
-  height: 15rem;
-  margin: 0 auto;
-  max-width: 100%;
-  position: relative;
-}
-.projects-container .image-3 {
-  background: url('/img/home/home-the-blocks-img.png');
-  background-size: cover;
-  width: 85rem;
-  height: 15rem;
-  margin: 0 auto;
-  max-width: 100%;
+.projects-container .project-card {
   position: relative;
 }
 .projects-container .content {
@@ -586,7 +473,8 @@ footer p {
 }
 .projects-container .project-card:first-of-type h3,
 .projects-container .project-card:last-child h3 {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: flex-end;
   background-color: #D8D8D8;
   border: 1px solid white;
   padding: 3rem 4rem;
@@ -595,7 +483,7 @@ footer p {
   letter-spacing: 0.5rem;
   font-weight: lighter;
   position: absolute;
-  bottom: -3rem;
+  top: 37%;
   right: 0;
 }
 .projects-container .project-card:nth-of-type(2) h3 {
@@ -607,8 +495,8 @@ footer p {
   font-size: 2.5rem;
   letter-spacing: 0.5rem;
   font-weight: lighter;
-  position: absolute;
-  bottom: -3rem;
+  position: relative;
+  bottom: 5rem;
   left: 0;
 }
 .projects-container p {
@@ -617,24 +505,22 @@ footer p {
   margin-bottom: 2rem;
 }
 .services-header {
-  margin-bottom: 4rem;
-}
-.services-header .image {
-  margin: 0 auto;
-  background: url('/img/services/services-jumbotron.png') center center no-repeat;
-  background-size: cover;
-  height: 20vh;
-  max-width: 1028px;
-}
-.services-header h1 {
   position: relative;
+  margin: 0rem auto 3rem;
+  max-width: 1028px;
+  width: 100%;
+}
+.services-header .image-text {
+  position: absolute;
+  left: 8%;
+  bottom: 8.3%;
   display: inline-block;
-  top: 9.5rem;
-  left: 5%;
+  color: white;
   font-size: 5rem;
-  font-weight: 600;
-  color: #fff;
-  width: 40px;
+  font-weight: bold;
+}
+.services-header h2 {
+  margin-bottom: 1rem;
 }
 .services-container {
   margin-bottom: 5rem;
@@ -651,46 +537,6 @@ footer p {
   font-size: 1.3rem;
   line-height: 2rem;
   width: 100%;
-}
-.services-container .image-1 {
-  background: url("/img/services/services-tab-pre-construction-img.png");
-  background-size: cover;
-  width: 85rem;
-  height: 15rem;
-  margin: 0 auto;
-  max-width: 100%;
-  width: 300rem;
-  height: 100%;
-}
-.services-container .image-2 {
-  background: url("/img/services/services-tab-construction-img.png");
-  background-size: cover;
-  width: 85rem;
-  height: 15rem;
-  margin: 0 auto;
-  max-width: 100%;
-  width: 300rem;
-  height: 100%;
-}
-.services-container .image-3 {
-  background: url("/img/services/services-tab-design-build-img.png");
-  background-size: cover;
-  width: 85rem;
-  height: 15rem;
-  margin: 0 auto;
-  max-width: 100%;
-  width: 300rem;
-  height: 100%;
-}
-.services-container .image-4 {
-  background: url("/img/services/services-tab-sustainability-img.png");
-  background-size: cover;
-  width: 85rem;
-  height: 15rem;
-  margin: 0 auto;
-  max-width: 100%;
-  width: 300rem;
-  height: 100%;
 }
 .tabs {
   width: 100%;
@@ -758,4 +604,3 @@ footer p {
   font-weight: 600;
   color: #fff;
 }
-
